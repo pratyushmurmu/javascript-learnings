@@ -115,3 +115,28 @@ console.log(typeof greet); //function
 //  Function:	typeof x === "function"
 //   Array:	Array.isArray(x)
 //    Object: typeof x === "object" 
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack (Primitive), Heap (Non-Primitive)
+
+
+// Stack Example:
+let myYouTubename = "pratyushmurmudotcom"
+ let anothername = myYouTubename
+ anothername = "olchiki"
+
+console.log(anothername);
+
+// Heap Example:
+let userOne = {
+    email: "user358@gmail.com",
+    upiid: "user@sbi"
+}
+
+let userTwo = userOne
+ userTwo.email= "bapu17229@gmail.com"
+console.log(userOne.email);//bapu17229@gmail.com
+console.log(userTwo.email);//bapu17229@gmail.com
+
+//In JavaScript, stack memory stores primitive values and function call frames, while heap memory stores objects and other reference types. The stack holds references to heap data.

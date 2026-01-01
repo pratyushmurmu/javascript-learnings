@@ -64,6 +64,37 @@ console.log(Object.entries(tinderUser));// [
 console.log(tinderUser.hasOwnProperty('isLoggedIn'));// true (determines whether an object has a property with the specified name)
 
 
+const course = {
+    coursename: "js in hindi",
+    price: "999",
+    courseinstructor: "hitesh choudhary"
+}
+
+// course.courseinstructor
+
+const {courseinstructor: sir} = course  // destructuring of objects: it makes code clean; readable and more efficient in large files, functions and APIs.
+
+// console.log(courseinstructor); // hitesh choudhary
+
+console.log(sir); // hitesh choudhary
+
+
+// De-structuring concept used in React 
+// const navbar = ({company}) => {
+
+// }
+
+// navbar(company = "hitesh")
+
+// APIs
+ // Learned a brief about APIs with an example of "randomuserapi" copying it's link and opening it at another tab. Then copying it to pasting it at the website "json formatter" to see it's Code.
+
+ //JSON APIs can be objects or arrays. 
+
+
+
+
+
 
 
 

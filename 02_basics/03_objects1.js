@@ -15,12 +15,12 @@ const jsUser = {        // {} --> this is  an object
     lastLoggedIn: ["Tuesday", "Wednesday","Thursday","Friday", "Sunday"] 
 } 
 
-//console.log(jsUser.email);// pratyushmurmu2004@gmail.com
-//console.log(jsUser["email"]);// pratyushmurmu2004@gmail.com
-//console.log(jsUser["full name"]);// couldn't be accessed using console.log(jsUser."full name")
-//console.log(jsUser.mySym);// mykey (without square brackets "[]")
-//console.log(typeof jsUser.mySym);// string
-//console.log(jsUser[mySym]);
+console.log(jsUser.email);// pratyushmurmu2004@gmail.com
+console.log(jsUser["email"]);// pratyushmurmu2004@gmail.com
+console.log(jsUser["full name"]);// couldn't be accessed using console.log(jsUser."full name")
+console.log(jsUser.mySym);// mykey (without square brackets "[]")
+console.log(typeof jsUser.mySym);// string
+console.log(jsUser[mySym]);
 
 jsUser.email = "pratyush24@gmail.com"
 //Object.freeze(jsUser)

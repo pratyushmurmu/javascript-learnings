@@ -49,3 +49,6 @@ if(boards === "pass" || jee <= 75){
     
 }
 // Both console.log statements are executed
+
+// ==: checks only value
+// ===: checks value and type

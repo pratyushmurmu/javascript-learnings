@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<body style="color: #FBC02D; background-color: #DC143C; padding: 50px;">
+    <h1 class="date">Random Dates</h1>
+    <div class="parent">
+    <div class="date">10 Jan 26</div>
+    <div class="date">11 Jan 26</div>
+    <div class="date">12 Jan 26</div>
+    <div class="date">13 Jan 26</div>
+    <div class="date">14 Jan 26</div>
+    <div class="date">15 Jan 26</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    //console.log(parent);
+    //console.log(parent.children);
+    //console.log(parent.children[1].innerHTML)
+    for(let i =0; i < parent.children.length; i++){
+        console.log(parent.children[i].innerHTML)
+    }
+    parent.children[1].style.color = "black"
+    //console.log(parent.firstElementChild)
+    //console.log(parent.lastElementChild)
+
+    const allDate = document.querySelector('.date')
+    console.log(allDate);
+    console.log(allDate.parentElement);
+    console.log(allDate.nextElementSibling);
+    
+    console.log("NODES: ", parent.childNodes)
+    
+</script>
+</html>

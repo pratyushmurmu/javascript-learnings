@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body style="background-color: #FFE4E1; color: #C2185B;">
+    <h2>Amazing image</h2>
+    <div>
+        <ul id="images">
+            <li><img id="city" src="https://images.pexels.com/photos/35568028/pexels-photo-35568028.jpeg?_gl=1*1yo6z7w*_ga*MTE3OTk3MjgwNC4xNzU3ODU3MTMw*_ga_8JE65Q40S6*czE3Njg2MjUzNTUkbzMkZzEkdDE3Njg2MjU2MzEkajYwJGwwJGgw" width="400px" height="500px" alt="city"></li>
+            <li><img id="girls" src="https://images.pexels.com/photos/35171760/pexels-photo-35171760.jpeg?_gl=1*16fj2ng*_ga*MTE3OTk3MjgwNC4xNzU3ODU3MTMw*_ga_8JE65Q40S6*czE3Njg2MjUzNTUkbzMkZzEkdDE3Njg2MjU3OTgkajU3JGwwJGgw" width="700px" height="500px"></li>
+            <li><img id="chinesegirl" src="https://images.pexels.com/photos/10918166/pexels-photo-10918166.png?_gl=1*1y2h5us*_ga*MTE3OTk3MjgwNC4xNzU3ODU3MTMw*_ga_8JE65Q40S6*czE3Njg2MjUzNTUkbzMkZzEkdDE3Njg2MjU5NjQkajQ2JGwwJGgw" width="500px" height="700px"></li>
+            <li><img id="japanese" src="https://images.pexels.com/photos/31370383/pexels-photo-31370383.jpeg?_gl=1*1g1l7l2*_ga*MTE3OTk3MjgwNC4xNzU3ODU3MTMw*_ga_8JE65Q40S6*czE3Njg2MjUzNTUkbzMkZzEkdDE3Njg2MjYwNjckajU5JGwwJGgw" width="500px" height="700px"></li>
+            <li><a style="color: red;" href="https://github.com/pratyushmurmu" id="github">GitHub pratyushmurmu</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    //document.getElementById('city').onclick = function(){
+    //    alert("This is wood worker in Hong Kong city")
+    //}
+        // attachEvent()
+    // jQuery - on
+// type, timestamp, defaultPrevented
+// target, toElement, srcElement,currentTarget
+// clientX, clientY, screenX, screenY
+//altKey, ctrlKey, shiftKey, keyCode
+
+//------------------------------------------------------------------------------------------------------------------------------------------
+// Event Bubbling
+
+// document.getElementById('images').addEventListener('click', function(c){ 
+// console.log("clicked inside the ul") }, false)
+// document.getElementById('city').addEventListener('click', function(c){ 
+// console.log("city is clicked")
+// c.stopPropagation(
+
+// ) }, false)
+
+//➡️ Event moves from child to parent
+//⚠️ Default behavior in JavaScript
+
+//------------------------------------------------------------------------------------------------------------------------------------------
+
+// Event Capturing
+ //   document.getElementById('images').addEventListener('click', function(c){
+ //      console.log("clicked inside the ul")
+ //   }, true)
+ //   document.getElementById('city').addEventListener('click', function(c){
+ //      console.log("city is clicked")
+ //   }, true)
+  
+    //➡️ Event moves from parent to child
+
+//    document.getElementById('github').addEventListener('click', function(g){
+//        console.log("GitHub clicked")
+//        g.preventDefault()
+//    },false)
+
+document.querySelector('#images').addEventListener('click', function(e){
+    console.log(e.target.tagName);
+    if (e.target.tagName === 'IMG') {
+        console.log(e.target.id)
+        let removeIt = e.target.parentNode
+    removeIt.remove()
+    }
+ //   let removeIt = e.target.parentNode
+ //   removeIt.remove()     //-> to remove images
+    //removeIt.parentNode.removeChild(removeIt)
+    
+})
+
+
+
+</script>
+</html>

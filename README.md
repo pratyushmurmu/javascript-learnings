@@ -14,6 +14,8 @@ I am learning JavaScript step by step and pushing my progress regularly to GitHu
 - Control Flow (if-else, loops)
 - Functions
 - Arrays and Objects
+- DOM Manipulation
+- Event and Async JS
 
 ## 🎯 Goal
 To build strong JavaScript fundamentals and gradually move towards

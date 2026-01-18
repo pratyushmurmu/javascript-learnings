@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai Aur Code</h1>
+    <button id="stop">stop</button>
+</body>
+<script>
+    //setTimeout(function(){
+    //    console.log("Pratyush");
+        
+    //},3000)  // appears in console after3000 milliseconds = 3 seconds
+// OR
+const timeout= function(){
+    console.log("Pratyush");
+    
+}
+const changeTEXT = function(){
+     document.querySelector('h1').innerHTML = " Apna College"
+}
+const changeMe =setTimeout(changeTEXT,2000)
+
+document.querySelector('#stop').addEventListener('click', function(){
+    clearTimeout(changeMe)
+    console.log("STOPPED");
+    
+})
+setTimeout(timeout, 3000)
+//Stop button event:
+//----------------------------------------------
+//document.querySelector('#stop').addEventListener('click', function(){
+//    clearTimeout(changeMe)
+//    console.log("STOPPED");
+//})
+//-----------------------------------------------
+//When the button is clicked:
+//Cancels the 2-second timeout
+//Prevents <h1> text from changing
+//Logs "STOPPED" to console
+
+
+</script>
+</html>
+
+ Case 1: ❌ You DO NOT click the stop button 
+
+Timeline:
+
+Page loads → shows "Chai Aur Code"
+
+After 2 seconds → text changes to "Apna College"
+
+Button stays visible
+
+✅ Final UI:
+
+Apna College
+[ stop ]
+
+Case 2: ✅ You CLICK the stop button before 2 seconds
+
+Timeline:
+
+Page loads → "Chai Aur Code"
+
+You click stop
+
+clearTimeout(changeMe) runs
+
+🚫 Result:
+
+Text does NOT change
+
+<h1> remains "Chai Aur Code"
+
+✅ Final UI:
+
+Chai Aur Code
+[ stop ]
+
+
+
